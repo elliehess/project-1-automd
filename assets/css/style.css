@@ -1,3 +1,20 @@
+:root {
+    --background: yellow;
+    --dark: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    color: var(--dark);
+    background-color: var(--background)
+}
+.h1 {
+    font-size: 24 px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 * {
     font-family: sans-serif;
     color: rgb(72, 10, 93);
