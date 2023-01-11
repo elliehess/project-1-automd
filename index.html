@@ -20,8 +20,21 @@
             <button id="start-button">Start Quiz</button>
         </div>
     </div>  
+    <!--User input for map, credits of google maps-->
+     <input
+      id="pac-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
     
+    <div id="map"></div>
     <script src="assets/js/script.js"></script>
+    <!--Src from the autocomplete docs in google maps platform. Correct endpoint?-->
+     <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
     
 </body>
 </html>
