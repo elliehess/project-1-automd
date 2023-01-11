@@ -1,0 +1,78 @@
+* {
+    font-family: sans-serif;
+    color: rgb(72, 10, 93);
+}
+
+#card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 200px;
+    padding: 25px;
+    width: 60%;
+    height: 80%;
+    border: 3px solid rgb(203, 7, 92);
+    border-radius: 5px; 
+}
+
+#start-button {
+    font-size: 20px;
+    background-color:rgb(191, 14, 87);
+    color: white; 
+    border: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#time-left {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+a {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: rgb(191, 14, 87);
+    padding: 5px;
+}
+
+#quiz-question {
+    font-size: larger;
+    font-weight: bold;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color:  rgb(248, 139, 248);
+}
+
+li {
+    width: 80%;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(191, 14, 87);
+    font-size: 90%;   
+}
+
+#back-button {
+    font-size: larger;
+    color: white;
+    background-color: rgb(191, 14, 87);
+    border-radius: 5px;
+}
+
+#clear-scores {
+    font-size: larger;
+    color: white;
+    background-color: rgb(191, 14, 87);
+    border-radius: 5px;
+}
+
+#createDiv {
+    color: gray
+}
