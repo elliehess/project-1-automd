@@ -94,3 +94,6 @@ function initAutocomplete() {
    .catch((error) => {
     console.error('Error', error);
    });
+
+   // test
+   
