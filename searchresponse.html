@@ -5,29 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/30053b2406.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Assets/style.css">
     <link rel="stylesheet" href="assets/css/style2.css">
     <title> Auto MD</title>
 </head>
 
 <body>
-    <a href="highscores.html">View High Scores</a>
     <div class = "container">
         <h1>Auto MD</h1><i style='font-size:24px' class='fas'>&#xf1b9;</i>
     </div>
-    <div id="card">
-        <div id="time-left"></div>
-        <div id="quiz-question">
-            <p>Its time for a <strong>Knowledge Check!</strong> Answer the following code-related questions within the time limit.</p>
-            <p>Each incorrect answer will decrease your score/time by ten seconds!</p>
-            <ul id="answer-choices"></ul>
-            <button id="start-button">Start Quiz</button>
-        </div>
+
+    <a href="./index.html" id="back-button"> Return to Main</a>
     </div>
+
+    <div class="col-12 col-md-9 p-3 text-light">
+      <h2><span>Search results: </span></h2>
+      <div id="response_data"></div>
+          <!--Location for API response data-->
+    </div>
+  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/script1.js"></script>
+    <script src="assets/js/searchresponse.js"></script>
     
 </body>
 </html>

@@ -1,18 +1,68 @@
 :root {
     --dark: black;
-    --background: yellow;
+    --container: yellow;
+    --light: white;
 
 }
-
+body {
+    background-color: var(--dark);
+}
 .container {
     display: flex;
     justify-content: center;
     padding: 15px;
-    background-color: var(--background);
+    background-color: var(--container);
     color: var(--dark);
+    border-radius: 30px 30px 30px 30px;
 }
 h1 {
     font-size: 34px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--dark)
+    color: var(--dark);
+}
+
+p {
+    color: var(--light);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 200px;
+    padding: 25px;
+    width: 60%;
+    height: 80%;
+    border: 8px solid var(--container);
+    border-radius: 5px; 
+}
+
+#response_data {
+    color: var(--light);
+}
+
+h2 {
+    font-size: 28px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+h2 span {
+    background-color: var(--light);
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px;
+}
+
+#back-button {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
 }
