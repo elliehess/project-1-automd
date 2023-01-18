@@ -5,37 +5,52 @@ const partnertoken = "2cd2c049426c40bea3bda0dcee042d17";
 
 //Call API Key
 
-const queryURL = "http://api.carmd.com/v3.0/maint?year=2015&make=CHEVROLET&model=EQUINOX";
-//$.ajax({
-    url: queryURL,
-    method: "GET",
-    dataType: "json",
-    headers: {"content-type":"application/json",
-    "authorization":"Basic YmFiMmI0YTgtOTJhZi00M2RlLWJhNjAtZjQ3ZjYzMzM1YTVm",
-    "partner-token":"2cd2c049426c40bea3bda0dcee042d17"},
-    data: {"year":"2015",
-    "make":"CHEVROLET",
-    "model":"EQUINOX",
-    "mileage":"51000 "}, 
-    success: function (res) {
-        console.log("Successful! AJax1:")
-        console.log(res)
-
-    
-    //var maintenance = 'Issue : '+data[0].desc ;
-        //maintenance += ' Due Mileage : '+data[0].due_mileage ;
-        //maintenance += ' Repair : '+data[0].repair ;
-        //$('response_data').append(maintenance);
+$(document).ready(function () { //we want the document to load only once
+    function onLoad(){
     }
-})
-.done(function(data) {
-    $('#response_data').append(JSON.stringify(data))
+
+    var make = document.querySelector('#makeSel').value;
+    var model = document.querySelector('#modelSel').value;
+    var year = document.querySelector('#yearSel').value;
+    var mileage = document.querySelector('#mileageSel').value
+
+    const queryURL = "http://api.carmd.com/v3.0/maint?";
+    queryURL = queryURL + "year=" + year + "&make=" + make + "&model=" + model + "&mileage=" + mileage
+    console.log (queryURL)
+
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+        dataType: "json",
+        headers: {"content-type":"application/json",
+        "authorization":"Basic YmFiMmI0YTgtOTJhZi00M2RlLWJhNjAtZjQ3ZjYzMzM1YTVm",
+        "partner-token":"2cd2c049426c40bea3bda0dcee042d17"},
+        // data: {"year":"",
+        // "make":"",
+        // "model":"",
+        // "mileage":""}, 
+        success: function (res) {
+            console.log("Successful! AJax1:")
+            console.log(res)
+
+            let user_response = ""; 
+
+            for (let i = 0; i < res.data.length; i++) {
+                const car = res.data[i]
+                if (car.due_mileage > 50000) {
+                    user_response = user_response + `<div class = "response_text">
+                    <h3>${car.desc}</h3><br>
+                    <p>Due_Mileage: ${car.due_mileage}</p>
+                    <p>Total Cost of Repair: ${car.repair.total_cost}</p>
+                </div>`;
+                }
+
+            }
+            $("#response_data").html(user_response);
+
+
+
+        }
+   });
 });
-
-
-
-var year = '';
-var make = '';
-var model = '';
-var mileage = '';
 

@@ -11,19 +11,32 @@
 </head>
 
 <body>
-    <a href="highscores.html">View High Scores</a>
-    <div class = "container">
-        <h1>Auto MD</h1><i style='font-size:24px' class='fas'>&#xf1b9;</i>
-    </div>
-    <div id="card">
-        <div id="time-left"></div>
-        <div id="quiz-question">
-            <p>Its time for a <strong>Knowledge Check!</strong> Answer the following code-related questions within the time limit.</p>
-            <p>Each incorrect answer will decrease your score/time by ten seconds!</p>
-            <ul id="answer-choices"></ul>
-            <button id="start-button">Start Quiz</button>
-        </div>
-    </div>
+    <div class="dynamic-dropdown">
+        <center>
+          <form name="myform" id="myForm">
+            <h3 id="dropdown-h3"><button> Search</button></h3>
+            <ul>
+              <li>
+                <select name="optone" id="makeSel" size="1">
+                  <option value="" selected="selected">Select make</option>
+                </select>
+              </li>
+              <li>
+                <select name="opttwo" id="modelSel" size="1">
+                  <option value="" selected="selected">Select model</option>
+                </select>
+              </li>
+              <li>
+                <select name="optthree" id="yearSel" size="1">
+                  <option value="" selected="selected">Select year</option>
+                </select>
+              </li>
+              <li>
+                      <input type="number" placeholder="Select Mileage" id="mileageSel" >
+              </li>
+            </ul>
+          </form>
+        </center>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
