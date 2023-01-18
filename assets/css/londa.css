@@ -1,26 +1,7 @@
-:root {
-    --background: yellow;
-    --dark: black;
-}
-
 * {
     font-family: sans-serif;
-    background-color: rgb(72, 10, 93);
+    color: rgb(72, 10, 93);
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    color: var(--dark);
-    background-color: var(--background)
-}
-.h1 {
-    font-size: 24 px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
 
 #card {
     display: flex;
@@ -95,4 +76,3 @@ li {
 #createDiv {
     color: gray
 }
-
