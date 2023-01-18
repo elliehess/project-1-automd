@@ -66,7 +66,7 @@ inputField.addEventListener("blur", function () {
   
 //local storage, does this need to be parsed or stringified?
   const userData = {
-    zipcode: document.getElementById('pac-inputs')
+    zipcode: document.getElementById('pac-input')
   };
 
 // possibly not the right url for the endpoint that we need, just a filler currently

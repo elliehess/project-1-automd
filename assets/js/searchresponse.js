@@ -2,7 +2,17 @@
 const APIKey = "Basic YmFiMmI0YTgtOTJhZi00M2RlLWJhNjAtZjQ3ZjYzMzM1YTVm";
 const partnertoken = "2cd2c049426c40bea3bda0dcee042d17";
 
-
+const history = JSON.parse(localStorage.getItem('search-history')) || [];
+const historyLastValue = history[history.length - 1];
+console.log(historyLastValue);
+renderBtns();
+function renderBtns() {
+    $(".history").empty();
+    history.forEach(function (i) {
+        const recentuserCar = $("<li><button>" + i + "</button></li>");
+        $(".history").prepend(recentuserCar);
+    })
+}
 //Call API Key
 
 $(document).ready(function () { //we want the document to load only once
@@ -40,19 +50,30 @@ $(document).ready(function () { //we want the document to load only once
             for (let i = 0; i < res.data.length; i++) {
                 const car = res.data[i]
                 if (car.due_mileage > 50000) {
-                    user_response = user_response + `<div class = "response_text">
-                    <h3>${car.desc}</h3><br>
-                    <p>Due_Mileage: ${car.due_mileage}</p>
-                    <p>Total Cost of Repair: ${car.repair.total_cost}</p>
-                </div>`;
+                    user_response = user_response + ` 
+                    <tr class = "response_text">
+                    <td>${car.desc}</td>
+                    <td>${car.due_mileage}</td>
+                    <td>${car.repair.repair_difficulty}</td>
+                    <td>$${car.repair.total_cost}</td>
+                    </tr>
+                `;
                 }
-
             }
+            renderBtns();
+            localStorage.setItem('search-history', JSON.stringify(history));
+            let usersearches = {
+                make: make,
+                model: model,
+                year: year,
+                mileage: mileage,
+            }
+            history.push(usersearches);
             $("#response_data").html(user_response); // puts data in div id on html page
-
-
-
         }
    });
 });
+
+
+
 

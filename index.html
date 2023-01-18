@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title> Auto Checkpoint </title>
+    <script src="https://kit.fontawesome.com/30053b2406.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title> Auto MD </title>
 </head>
 
 <body>
-    
-    <a href="assets/js/script.js">Click to enter zipcode for local shops!</a>
-    <div id="card">
-        <div id="time-left"></div>
-        <div id="quiz-question">
-            <h1>Auto MD</h1>
-            <p> Let's Diagnose Your Car!</p>
-            <ul id="answer-choices"></ul>
-            
-            
-            <br>
-        </div>
-    </div>  
-    
-    
-    
-</body>
-    
+    <a href="assets/js/script.js" id="zipcode_api"><i class="fa-solid fa-magnifying-glass"></i>Click to enter zipcode for local auto shops!</a>
+    <div class = "container">
+        <h1>Auto MD</h1><i style='font-size:24px' class='fas'>&#xf1b9;</i>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="card"><p>Is it about time for an oil change? Did a weird light just come on?<br>
+                Here at Auto MD, we don't want you getting taken advantage of at the auto body shop. We are here to give you a 
+                knowledge base of what your car may or may NOT need! We can give you an idea of what kind of
+                maintenance your car needs, including the difficulty, the cost, and how much time it will take. 
+                <br><br><span>Let's Diagnose!</span></p>
+            </div>
+   
+ <!--Dropdown menus for users input-->
     <div class="dynamic-dropdown">
-      <center>
+      <center>\
         <form name="myform" id="myForm" onsubmit="return false">
-          <h3 id="dropdown-h3"><button id="submit" > Search</button></h3>
           <ul>
             <li>
               <select name="optone" id="makeSel" size="1">
@@ -48,20 +44,16 @@
               </select>
             </li>
             <li>
-               
-                    <input type="number" placeholder="Select Mileage" id="mileageSel" > 
-                 
-                
+            <input type="number" placeholder="Select Mileage" id="mileageSel" >     
             </li>
-
-    
-              <a href="javascript:window.location.assign(buildUrl());"><img src="http://i40.photobucket.com/albums/e218/Jordan_Imhoff/search-12-xxl_zpsxpsu2fmp.png"/></a>
-    
+             <!--submit button used for event listener-->
+            <h3 id="dropdown-h3"><button id="submit" > Submit</button></h3>    
           </ul>
         </form>
       </center>
     </div>
     <hr/>
+</body>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>

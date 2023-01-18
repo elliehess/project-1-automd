@@ -1,4 +1,4 @@
-var makeObject = {
+var makeObject = { //form input selectors 
       "Acura": {
         "ILX": ["2015", "2014", "2013"],
         "Integra": ["2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994"],
@@ -323,26 +323,11 @@ var makeObject = {
         }
       }
     }
-    
-    
-    // function buildUrl() {
-    //   var url = "http://api.carmd.com/v3.0/maintlist?year=<year>&make=<make>&model=<model>&unit=<unit>";
-    //   var make = document.querySelector('#makeSel').value;
-    //   var model = document.querySelector('#modelSel').value;
-    //   var year = document.querySelector('#yearSel').value;
-    //   var mileage = document.querySelector('#mileageSel').value
-    //   var qs = encodeURIComponent(make + ' ' + model + ' ' + year +' ' + mileage);
-    //   if (qs.length > 0) {
-    //     url = url + "search?q=" + qs;
-    //   }
-    //   return url;
-    // }
+  
 
-
-var submit = document.querySelector("#submit");
-submit.addEventListener('click',(event)=>{
+var submit = document.querySelector("#submit"); 
+submit.addEventListener('click',(event)=>{//call function once submit button is clicked 
     event.preventDefault();
-    console.log('anything!')
 //selectors for user input 
     var make = document.querySelector('#makeSel').value;
     var model = document.querySelector('#modelSel').value;
@@ -353,6 +338,6 @@ submit.addEventListener('click',(event)=>{
 
     queryURL = queryURL + "year=" + year + "&make=" + make + "&model=" + model + "&mileage=" + mileage;
 
-    location.assign(queryURL);
+    location.assign(queryURL); //relocate to new webpage 
 });
 
