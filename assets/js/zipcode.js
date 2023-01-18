@@ -2,15 +2,16 @@
 const input = document.getElementById("pac-input");
 const submitBtn = document.getElementById("zipcodeSearch");
 // this creates a list, we want parse to be default
-const zipArray = JSON.parse(localStorage.getItem("zipArray")) || []
+const zipArray = JSON.parse(localStorage.getItem("zipArray")) || [] 
 
-//switch over to this one
-// const map = new mapboxgl.Map({
-//   container: 'map',
-//   style: 'mapbox://styles/mapbox/streets-v12',
-//   center: [-74.5, 40],
-//   zoom: 9
-// });
+//center and zoom are just a starting point for the map
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3RxYjhqbzBkMmEzdXF6bzRnczhsamoifQ.yWGERvYjWy73r4QslnX8tQ';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [-118.2437, 34.0522],
+  zoom: 9
+});
 
 //screen load by layer
 map.on('load', () => {
@@ -25,6 +26,13 @@ map.on('load', () => {
   });
 });
 
+// start of control for map search
+// map.addControl(geocoder);
+//     geocoder.on('result', function(ev) {
+//     map.setCenter(ev.result.geometry.coordinates);
+//     });
+
+    
 //submit button event listener, start of logic
 
 submitBtn.addEventListener("click", (e) => {
@@ -36,14 +44,25 @@ submitBtn.addEventListener("click", (e) => {
     localStorage.setItem("zipArray", JSON.stringify(zipArray))
 
   }
-  
+  fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/2%20Lincoln%20Memorial%20Cir%20NW.json?access_token=pk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3RxYjhqbzBkMmEzdXF6bzRnczhsamoifQ.yWGERvYjWy73r4QslnX8tQ', {
+    method: 'GET',
+    Headers: {'Content-Type': 'application/json'},
+  })
+  .then((Response) => Response.json())
+  .then((data) => {
+
+    console.log('Success:', data);
+  })
+   .catch((error) => {
+    console.error('Error', error);
+   });
 });
 
 // input field for zipcode, do we need blur?
-//let inputField = document.getElementById('pac-input');
-// inputField.addEventListener("blur", function () {
-//     localStorage.setItem("input-field", inputField.value);
-// });
+let inputField = document.getElementById('pac-input');
+inputField.addEventListener("blur", function () {
+    localStorage.setItem("input-field", inputField.value);
+});
   
 //local storage, does this need to be parsed or stringified?
   const userData = {
@@ -51,18 +70,6 @@ submitBtn.addEventListener("click", (e) => {
   };
 
 // possibly not the right url for the endpoint that we need, just a filler currently
-  // fetch('https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/auto/300x200?access_token=sk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3R0OHJvMTEzNTgzcGs2MHV6bGFxa3EifQ.M4kwV5JtsfhXnaHPyuyJow', {
-  //   method: 'GET',
-  //   body: JSON.stringify(userData),
-  //   Headers: {'Content-Type': 'application/json'},
-  // })
-  // .then((Response) => Response.json())
-  // .then((data) => {
-
-  //   console.log('Success:', data);
-  // })
-  //  .catch((error) => {
-  //   console.error('Error', error);
-  //  });
+ 
 
   // call back function??
