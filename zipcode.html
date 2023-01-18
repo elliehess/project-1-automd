@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+        <style>
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; bottom: 0; width: 75%; }
+        </style>
+<body>
+
+    <!--User input for map, credits of google maps-->
+     <input
+      id="pac-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+      />
+
+      <button type="button" id="zipcodeSearch" Search>Zipcode</button>
+<!--two key system, keep src above the script tag-->
+      <div id='map' style='position: absolute; right: 0; bottom: 0'></div>
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+      <!-- <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3RxYjhqbzBkMmEzdXF6bzRnczhsamoifQ.yWGERvYjWy73r4QslnX8tQ';
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11', 
+          center: [-85.6681, 42.9634],
+          zoom: 9
+        
+        });
+      </script> -->
+      
+
+    
+    <script src="assets/js/zipcode.js"></script>
+</body>
+</html> 
