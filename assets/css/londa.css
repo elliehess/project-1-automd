@@ -1,3 +1,8 @@
+* {
+    font-family: sans-serif;
+    color: rgb(72, 10, 93);
+}
+
 #card {
     display: flex;
     justify-content: center;
@@ -71,4 +76,3 @@ li {
 #createDiv {
     color: gray
 }
-
