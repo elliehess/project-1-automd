@@ -25,18 +25,18 @@
 <!--two key system, keep src above the script tag-->
       <div id='map' style='position: absolute; right: 0; bottom: 0'></div>
       <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-      <!-- <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3RxYjhqbzBkMmEzdXF6bzRnczhsamoifQ.yWGERvYjWy73r4QslnX8tQ';
-        var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/streets-v11', 
-          center: [-85.6681, 42.9634],
-          zoom: 9
-        
-        });
-      </script> -->
-      
 
+      <!-- search box start from docs-->
+      <div>
+        <mapbox-search-box
+        id="map-search"
+        access-token="pk.eyJ1IjoiY2Ftc2NobHVldGVyIiwiYSI6ImNsY3RxYjhqbzBkMmEzdXF6bzRnczhsamoifQ.yWGERvYjWy73r4QslnX8tQ"
+        proximity="0,0">
+        <style> body { margin: 0; padding: 0;}
+        #map-search { flex-wrap: wrap; display: inline-block; position: absolute;  ;} </style>
+      </mapbox-search-box>
+        </div>
+  
     
     <script src="assets/js/zipcode.js"></script>
 </body>

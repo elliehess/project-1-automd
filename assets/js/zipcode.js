@@ -10,7 +10,7 @@ const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
   center: [-118.2437, 34.0522],
-  zoom: 9
+  zoom: 9 
 });
 
 //screen load by layer
@@ -26,13 +26,7 @@ map.on('load', () => {
   });
 });
 
-// start of control for map search
-// map.addControl(geocoder);
-//     geocoder.on('result', function(ev) {
-//     map.setCenter(ev.result.geometry.coordinates);
-//     });
 
-    
 //submit button event listener, start of logic
 
 submitBtn.addEventListener("click", (e) => {
