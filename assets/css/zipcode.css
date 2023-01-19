@@ -1,0 +1,14 @@
+:root {
+    --dark: black;
+    --container: yellow;
+    --light: white;
+
+}
+
+* {
+    background-color: var(--dark)
+}
+
+#zipcodeSearch {
+    color: var(--light)
+}

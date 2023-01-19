@@ -2,6 +2,7 @@
 const APIKey = "Basic YmFiMmI0YTgtOTJhZi00M2RlLWJhNjAtZjQ3ZjYzMzM1YTVm";
 const partnertoken = "2cd2c049426c40bea3bda0dcee042d17";
 
+//Use local storage for search history
 const history = JSON.parse(localStorage.getItem('search-history')) || [];
 const historyLastValue = history[history.length - 1];
 console.log(historyLastValue);
@@ -60,6 +61,7 @@ $(document).ready(function () { //we want the document to load only once
                 `;
                 }
             }
+            //prepend values to search history
             renderBtns();
             localStorage.setItem('search-history', JSON.stringify(history));
             let usersearches = {
