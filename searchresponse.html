@@ -15,13 +15,31 @@
         <h1>Auto MD</h1><i style='font-size:24px' class='fas'>&#xf1b9;</i>
     </div>
 
-    <a href="./index.html" id="back-button"> Return to Main</a>
+    <a href="./index.html" id="back-button"> Return to Main</a><!--Return to the main html page-->
     </div>
 
     <div class="col-12 col-md-9 p-3 text-light">
       <h2><span>Search results: </span></h2>
-      <div class="result-container" id="response_data"></div> result-content 
-          <!--Location for API response data-->
+      <div class = "history-results">
+      <aside><!--Display search history results-->
+        <ul class="list-group history mx-auto"></ul>
+      </aside>
+      </div>
+      <div class="result-container">
+          <table class="table is-bordered is-striped">
+            <thead>
+                <tr>
+                    <th>Issue:</th>
+                    <th>Due Mileage:</th>
+                    <th>Repair Difficulty:</th>
+                    <th>Total Cost of Repair: </th>
+                </tr>
+            </thead>
+            <tbody id="response_data">
+                    <!--Location for API response data-->
+            </tbody>
+          </table>
+      </div>
     </div>
   </div>
    
