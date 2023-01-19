@@ -6,7 +6,11 @@ This is an application that gives the user accesible, useful maintenance informa
 
 ## Visuals
 
+![_Users_ellie_Desktop_bootcamp_projects_project-1-automd_index html](https://user-images.githubusercontent.com/118075347/213559922-63ceb8ed-85d0-4e20-be36-0a47aba73ef9.png)
 
+![_Users_ellie_Desktop_bootcamp_projects_project-1-automd_searchresponse html_year=1999 make=Acura model=Integra mileage=60000](https://user-images.githubusercontent.com/118075347/213559941-b2e211f4-53ee-4430-86fe-a42ceb37a97d.png)
+
+![_Users_ellie_Desktop_bootcamp_projects_project-1-automd_zipcode html (1)](https://user-images.githubusercontent.com/118075347/213560115-13a50a2e-3c59-4be8-b172-fedb88af2b12.png)
 
 
 [Click here for Webpage](https://elliehess.github.io/project-1-automd/)
