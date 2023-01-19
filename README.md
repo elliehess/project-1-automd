@@ -6,11 +6,10 @@ This is an application that gives the user accesible, useful maintenance informa
 
 ## Visuals
 
-![_Users_ellie_Desktop_bootcamp_challenges_module-6-weather-dashboard_index html](https://user-images.githubusercontent.com/118075347/211913378-ae82278e-5be0-4708-8eda-616cbfdbc292.png)
 
 
 
-[Click here for Webpage](https://elliehess.github.io/module-6-weather-dashboard/)
+[Click here for Webpage](https://elliehess.github.io/project-1-automd/)
 
 ## Installation
 
